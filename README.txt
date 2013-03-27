@@ -2,7 +2,9 @@
 TreasureChest Converter
 =======================
 
-Converts the old chests.yml file format to the new multi-file format.
+Use this package to convert the old TreasureChest chest.yml file formate to the new multi-file format.
+
+See: http://dev.bukkit.org/server-mods/treasurechest/
 
 Typically I only upgrade plugins as needed. In TreasureChest's case I went several versions before upgrading to the new multi-file format. As a result, I couldn't use automagical embedded conversion command. This package performs that conversion manually.
 
