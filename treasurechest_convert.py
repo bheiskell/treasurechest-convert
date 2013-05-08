@@ -34,7 +34,7 @@ for key, chest in chests_object['chests']['chests'].iteritems():
             'container': {
                 '==': 'com.mtihc.minecraft.treasurechest.v8.core.BlockInventory',
                 'world': chest['location']['world'],
-                'cords': {
+                'coords': {
                     '==': 'Vector',
                     'x': chest['location']['vec']['x'],
                     'y': chest['location']['vec']['y'],
@@ -43,15 +43,19 @@ for key, chest in chests_object['chests']['chests'].iteritems():
                 'type': 'CHEST',
                 'size': chest['inventory']['size'],
                 'contents': {},
-            }
+            },
+            'messages': {
+               'UNLIMITED': chest['messages']['FOUND_UNLIMITED'],
+               'FOUND': chest['messages']['FOUND'],
+               'FOUND_ALREADY': chest['messages']['FOUND_ALREADY'],
+            },
+            'ranks': [],
+            'random': chest['randomness'],
+            'forget-time': chest['forgetTime'],
+            'ignore-protection': chest['ignoreProtection'],
+            'rewards': {},
+            'unlimited': chest['isUnlimited'],
         },
-        'messages': chest['messages'],
-        'ranks': [],
-        'random': chest['randomness'],
-        'forget-time': chest['forgetTime'],
-        'ignore-protection': chest['ignoreProtection'],
-        'rewards': {},
-        'unlimited': chest['isUnlimited'],
     }
 
     for item_key, item in chest['inventory']['items'].iteritems():
